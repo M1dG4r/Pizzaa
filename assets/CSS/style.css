@@ -1,0 +1,487 @@
+body {
+    background: black;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+
+    font-size: 24px;
+    line-height: 1.6;
+    color: #FFFFFF;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+/* intro */
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background: url("../images/fon.png") center no-repeat;
+    background-size: cover;
+
+}
+/* top */
+.top {
+    display: flex;
+    justify-content: space-between;
+}
+/* logo */
+.logo {
+    width: 30%;
+}
+.logo img {
+    width: 100%;
+}
+/* Header */
+.header {
+    padding-top: 30px;
+}
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+/* nav */
+.nav {
+    font-size: 30px;
+    text-transform: uppercase;
+
+}
+.nav_Link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px;
+    color: yellow;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+.nav_Link:hover {
+    color: #FFFFFF;
+}
+
+/*  Button   */
+.Button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    border: 4px solid red;
+    border-radius: 50px;
+    font-size: 30px;
+    font-weight: 700px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.2s linear;
+}
+.btn:hover {
+    color: yellow;
+    border-color: yellow;
+}
+.pizza {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.pizza1 {
+    width: 60%;
+}
+/* section2 */
+.section2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    background: url("../Images/Pblack.jpg") center no-repeat;
+    background-size: cover;
+    padding: 30px 0;
+}
+/* text */
+.text {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 40px;
+    width: 70%;
+    padding: 0 30px;
+}
+.text p {
+    font-size: 18px;
+}
+.text h2 {
+    text-align: center;
+    margin: 18px 0;
+}
+/*  */
+.col{ 
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: url("../images/Fon3.png");
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+.columns {
+    width: 400px;
+    padding: 8px;
+}
+
+.price {
+    list-style-type: none;
+    border: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.price:hover {
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+    color: white;
+    font-size: 25px;
+}
+
+.price li {
+    border-bottom: 1px solid #eee;
+    padding: 20px;
+    text-align: center;
+    background-color: #666161;
+}
+
+.price .grey {
+    background-color: #C4C4C4;
+    font-size: 20px;
+}
+
+.colbutton {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+}
+.colbutton:hover{
+    color: red;
+}
+/*  */
+.sectionvideo{
+    height: 100vh;
+    overflow: hidden;
+    filter: brightness(50%);
+    position: relative;
+}
+
+.videomedia{
+position: relative;
+padding-bottom: 56.25%;
+z-index: 1;
+}
+.video{
+width: 100%;
+height: 100vh;
+object-fit: cover;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+.section3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/Fon3.png") center no-repeat;
+    background-size: cover;
+    flex-wrap: wrap;
+}
+/* burger */
+#menu__toggle {
+    opacity: 0;
+}
+/* стилізую кнопку */
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+/* добавляю бургер */
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: yellow;
+}
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+.hamburger-menu {
+    visibility: hidden;
+}
+/* настроюю меню */
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 200px;
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+/* настроюю елементи в середени меню */
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Inter', Bold;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+/* настройка відкриття меню */
+.menu__item:hover {
+    background-color: #CFD8DC;
+}
+#menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#menu__toggle:checked~.menu__box {
+    visibility: visible;
+    right: 0;
+}
+/* настройка анімації */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+/* end burger */
+.paperony {
+    margin: 30px 35px;
+}
+.pa {
+    width: 310px;
+}
+.gray {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 310px;
+    width: 310px;
+    background-color: #666161;
+    border-radius: 40px 40px 0 0;
+}
+.gray p {
+    font-size: 16px;
+    text-align: center;
+}
+.gray h4 {
+    text-align: center;
+}
+.wg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 310px;
+    background-color: #C4C4C4;
+    border-radius: 0 0 40px 40px;
+    transition: color 0.2s linear;
+}
+.wg a {
+    text-align: center;
+    margin: 0;
+}
+.wg p {
+
+    font-size: 24px;
+}
+.wg:hover {
+    color: red;
+    background: yellow;
+}
+/* Feedback */
+.form{
+    width: 50%;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.feedback-input{
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    background-color: #FFFFFF;
+    padding: 13px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0px solid transparent;
+    border-bottom: 1px solid #000;   
+}
+textarea{
+    width: 100%;
+    height: 50px;
+    resize: vertical;
+}
+.button-submit{
+    float: left;
+    width: 100%;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background-color: #C4C4C4;
+    color: #000000;
+    font-size: 18px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 300;
+}
+.button-submit:hover{
+    background-color: yellow;
+    color: red;
+    border: 1px splid red;
+}
+/* section4 */
+.section4 {
+    background: url("../images/fonfuter.png") center no-repeat;
+    background-size: cover;
+}
+.textfuter {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: start;
+    transition: color 0.2s linear
+}
+.textfuter1 {
+    margin-top: 30px;
+    text-align: center;
+}
+.textfuter1 img {
+    margin: 10px 0;
+    width: 16%;
+}
+.bfon {
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: top;
+    padding-bottom: 20px;
+}
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.ct:hover {
+    color: yellow;
+}
+
+
+@media screen and (max-width: 1200px) {
+    h2 {
+        font-size: 20px;
+    }
+    a {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 992px) {
+    a {
+        font-size: 16px;
+    }
+    .btn {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav a {
+        display: none;
+    }
+    .hamburger-menu {
+        visibility: visible;
+    }
+    .btn {
+        font-size: 16px;
+    }
+    .text p {
+        font-size: 14px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+    .bfon {
+        flex-direction: column;
+    }
+    .textfuter {
+        text-align: center;
+    }
+    .textfuter1 img {
+        width: 10%;
+    }
+    a {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .btn {
+        font-size: 12px;
+    }
+    .text p {
+        font-size: 10px;
+    }
+    h2 {
+        font-size: 12px;
+    }
+}
